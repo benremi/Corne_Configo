@@ -37,6 +37,24 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        esca {
+            bindings = <&kp ESC>;
+            key-positions = <17 18>;
+        };
+    };
+
+    macros {
+        accoumting: accoumting {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "ACCOUMTING";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,7 +70,7 @@
 &kp TAB    &kp Q  &kp W  &kp E                &kp R              &kp T              &kp Y               &kp U                 &kp I      &kp O    &kp P         &kp BSPC
 &kp LCTRL  &kp A  &kp S  &HML LEFT_CONTROL D  &HML LEFT_SHIFT F  &kp G              &HMR RIGHT_SHIFT H  &HMR RIGHT_CONTROL J  &kp K      &kp L    &kp SEMI      &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C                &kp V              &kp B              &kp N               &kp M                 &kp COMMA  &kp DOT  &kp LS(FSLH)  &kp ESC
-                         &kp LGUI             &mo 1              &lt 0 BACKSPACE    &lt 0 SPACE         &mo 2                 &kp RALT
+                         &kp LGUI             &mo 1              &lt 3 BACKSPACE    &lt 3 SPACE         &mo 2                 &kp RALT
             >;
         };
 
@@ -89,12 +107,12 @@
         };
 
         numpad_layer {
-            display-name = "Lower";
+            display-name = "numpad";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans    &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &kp FSLH  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&kp TAB    &kp BSPC      &kp N7  &kp N8  &kp N9  &kp EQUAL    &kp N6    &kp N7    &kp UP    &kp N9     &kp N0    &kp BSPC
+&tog 3     &kp LS(PLUS)  &kp N4  &kp N5  &kp N6  &kp MINUS    &kp LEFT  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans
+&kp LSHFT  &kp EQUAL     &kp N1  &kp N2  &kp N3  &kp DOT      &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &kp FSLH  &to 3
+                                 &kp N0  &trans  &kp ENTER    &kp RET   &trans    &kp RALT
             >;
         };
 
