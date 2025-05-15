@@ -116,16 +116,16 @@
             >;
         };
 
-        layer_3 {
+        layer_4 {
             bindings = <
-&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
-&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
-&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
-               &kp  &kp  &kp    &kp  &kp  &kp
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
-        layer_4 {
+        layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
