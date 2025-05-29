@@ -42,21 +42,26 @@
 
         esca {
             bindings = <&kp ESC>;
-            key-positions = <17 18>;
+            key-positions = <19 20>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <13 12>;
+            key-positions = <1 0>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <38 17>;
         };
     };
 
     macros {
-        accoumting: accoumting {
+        rounding_macro: rounding_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none>;
-            label = "ACCOUMTING";
+            label = "ROUNDING_MACRO";
         };
     };
 
