@@ -35,6 +35,14 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 36 37 38>;
             hold-trigger-on-release;
         };
+
+        tap_dance_mod_tap: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MOD_TAP";
+            #binding-cells = <0>;
+            bindings = <&triple_dots>;
+            tapping-term-ms = <350>;
+        };
     };
 
     combos {
@@ -54,6 +62,16 @@
             bindings = <&kp ENTER>;
             key-positions = <38 17>;
         };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <15 27>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <16 28>;
+        };
     };
 
     macros {
@@ -62,6 +80,13 @@
             #binding-cells = <0>;
             bindings = <&none>;
             label = "ROUNDING_MACRO";
+        };
+
+        triple_dots: triple_dots {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp DOT &kp SPACE>;
+            label = "TRIPLE_DOTS";
         };
     };
 
